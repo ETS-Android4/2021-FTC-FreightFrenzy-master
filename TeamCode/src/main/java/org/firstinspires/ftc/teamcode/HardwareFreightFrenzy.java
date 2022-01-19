@@ -1,23 +1,17 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-import static java.lang.Thread.sleep;
-import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.gamepad1;
-
-public class HardwareFreightFrenzy {
+public class HardwareFreightFrenzy <crServo> {
 
     //Wheels
     public DcMotor leftFront;
     public DcMotor leftBack;
     public DcMotor rightFront;
     public DcMotor rightBack;
-
-    //outtake slingshot thingy
-   // public DcMotor leftoutake;
-   // public DcMotor rightoutake;
-
+    public CRServo spinner;
 
 
     int driveTime;

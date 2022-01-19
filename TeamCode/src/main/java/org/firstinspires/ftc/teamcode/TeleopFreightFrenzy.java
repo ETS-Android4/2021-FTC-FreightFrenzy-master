@@ -34,10 +34,10 @@ public class TeleopFreightFrenzy extends LinearOpMode {
 
             if (gamepad1.start) {
 
-                Gerty.leftFront.setPower((fwdBack + 1.5*strafe - turn) * .25);
-                Gerty.leftBack.setPower((fwdBack - 1.5*strafe - turn) * .25);
-                Gerty.rightFront.setPower((-fwdBack + 1.5*strafe - turn) * .25);
-                Gerty.rightBack.setPower((-fwdBack - 1.5*strafe - turn) * .25);
+                Gerty.leftFront.setPower((fwdBack + 1.5 * strafe - turn) * .25);
+                Gerty.leftBack.setPower((fwdBack - 1.5 * strafe - turn) * .25);
+                Gerty.rightFront.setPower((-fwdBack + 1.5 * strafe - turn) * .25);
+                Gerty.rightBack.setPower((-fwdBack - 1.5 * strafe - turn) * .25);
 
             } else { // drive robot normally at full speed
 
@@ -47,28 +47,23 @@ public class TeleopFreightFrenzy extends LinearOpMode {
                 Gerty.rightBack.setPower((-fwdBack - strafe - turn));
 
             }
+            { if (gamepad2.a) {
+                Gerty.spinner.setPower(.5);
+
+            } else if (gamepad2.b) {
+                Gerty.spinner.setPower(0);
 
             }
 
-       /* if (gamepad2.right_bumper) {
-            Robot.Outake(1);
-        }
-        else {
-            Robot.Outake(0);
-        }
 
-        if (gamepad2.left_bumper) {
-            Robot.Outake(-1);
-        }
-        else {
-            Robot.Outake(0);
-        }
-        */
+            }
+
 
         }
 
 
     }
+}
 
 
 
