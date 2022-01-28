@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-public class HardwareFreightFrenzy <crServo> {
+public class HardwareFreightFrenzy { //<crServo> {
 
     //Wheels
     public DcMotor leftFront;

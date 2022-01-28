@@ -1,14 +1,13 @@
-package org.firstinspires.ftc.teamcode.Autonomous;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
-import org.firstinspires.ftc.teamcode.HardwareFreightFrenzy;
-
-//left wobble third square
-@Autonomous (name = "AutoRed7")
-public class AutoRed7 extends LinearOpMode {
+@Autonomous (name = "AutoRed2")
+//delivering left wobble goal to closest square
+public class AutoRed2 extends LinearOpMode {
     HardwareFreightFrenzy Gerty = new HardwareFreightFrenzy();
+
     @Override
     public void runOpMode() throws InterruptedException {
 
@@ -25,17 +24,17 @@ public class AutoRed7 extends LinearOpMode {
         telemetry.update();
 
         waitForStart();
-        Gerty.DriveStraight(1,3000,1);
-        Thread.sleep(1000);
 
-        //strafe right
+        //strafe right just a little bit
+
         Gerty.DriveSideways(.5,1000,1,1,1,1);
         Thread.sleep(1000);
+
+        //drive straight and stop on line
 
         Gerty.DriveStraight(1,5000,1);
         Thread.sleep(5000);
 
-        Gerty.DriveStraight(1,4000,-1);
-        Thread.sleep(2000);
+
     }
 }

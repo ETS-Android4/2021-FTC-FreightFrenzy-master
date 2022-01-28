@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 public class TeleopFreightFrenzy extends LinearOpMode {
 
-    HardwareFreightFrenzy Gerty = new HardwareFreightFrenzy();
+    HardwareFreightFrenzy Legacy = new HardwareFreightFrenzy();
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -17,7 +17,7 @@ public class TeleopFreightFrenzy extends LinearOpMode {
         telemetry.update();
 
         System.out.println("Initialize Robot");
-        Gerty.InitializeRobot(hardwareMap);
+        Legacy.InitializeRobot(hardwareMap);
         System.out.println("Robot Initialized");
 
         telemetry.addData("Status", "Ready!");
@@ -34,24 +34,24 @@ public class TeleopFreightFrenzy extends LinearOpMode {
 
             if (gamepad1.start) {
 
-                Gerty.leftFront.setPower((fwdBack + 1.5 * strafe - turn) * .25);
-                Gerty.leftBack.setPower((fwdBack - 1.5 * strafe - turn) * .25);
-                Gerty.rightFront.setPower((-fwdBack + 1.5 * strafe - turn) * .25);
-                Gerty.rightBack.setPower((-fwdBack - 1.5 * strafe - turn) * .25);
+                Legacy.leftFront.setPower((fwdBack - 1.5 * strafe - turn) * .25);
+                Legacy.leftBack.setPower((fwdBack + 1.5 * strafe - turn) * .25);
+                Legacy.rightFront.setPower((-fwdBack - 1.5 * strafe - turn) * .25);
+                Legacy.rightBack.setPower((-fwdBack + 1.5 * strafe - turn) * .25);
 
             } else { // drive robot normally at full speed
 
-                Gerty.leftFront.setPower((fwdBack + strafe - turn));
-                Gerty.leftBack.setPower((fwdBack - strafe - turn));
-                Gerty.rightFront.setPower((-fwdBack + strafe - turn));
-                Gerty.rightBack.setPower((-fwdBack - strafe - turn));
+                Legacy.leftFront.setPower((fwdBack - strafe - turn));
+                Legacy.leftBack.setPower((fwdBack + strafe - turn));
+                Legacy.rightFront.setPower((-fwdBack - strafe - turn));
+                Legacy.rightBack.setPower((-fwdBack + strafe - turn));
 
             }
             { if (gamepad2.a) {
-                Gerty.spinner.setPower(.5);
+                Legacy.spinner.setPower(.5);
 
             } else if (gamepad2.b) {
-                Gerty.spinner.setPower(0);
+                Legacy.spinner.setPower(0);
 
             }
 

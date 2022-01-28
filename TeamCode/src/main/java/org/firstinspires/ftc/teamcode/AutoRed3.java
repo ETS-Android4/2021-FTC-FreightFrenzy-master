@@ -1,15 +1,12 @@
-package org.firstinspires.ftc.teamcode.Autonomous;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
-import org.firstinspires.ftc.teamcode.HardwareFreightFrenzy;
-
-//just parking on launch line
-@Autonomous (name = "AutoRed1")
-public class AutoRed1 extends LinearOpMode {
-    HardwareFreightFrenzy Gerty = new HardwareFreightFrenzy();
-
+//closest square with right wobble
+@Autonomous (name = "AutoRed3")
+public class AutoRed3 extends LinearOpMode {
+    HardwareFreightFrenzy Legacy = new HardwareFreightFrenzy();
     @Override
     public void runOpMode() throws InterruptedException {
 
@@ -18,7 +15,7 @@ public class AutoRed1 extends LinearOpMode {
         telemetry.update();
 
         System.out.println("Initialize Robot");
-        Gerty.InitializeRobot(hardwareMap);
+        Legacy.InitializeRobot(hardwareMap);
         System.out.println("Robot Initialized");
 
         telemetry.addData("Status", "Ready!");
@@ -26,9 +23,20 @@ public class AutoRed1 extends LinearOpMode {
         telemetry.update();
 
         waitForStart();
-        Gerty.DriveStraight(1,500,1);
 
-        Thread.sleep(5000);
+        Legacy.DriveStraight(1,3500,1);
+        Thread.sleep(1000);
+
+
+        Legacy.DriveSideways(.5,3000,1,1,1,1);
+        Thread.sleep(3000);
+
+        Legacy.DriveStraight(.5,1000,1);
+        Thread.sleep(1000);
+
+
+
+
 
 
     }
