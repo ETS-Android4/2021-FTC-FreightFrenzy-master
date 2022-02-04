@@ -203,6 +203,57 @@ public class Hardware {
         rightFront.setPower(0.0);
         rightBack.setPower(0.0);
     }
+
+    //autonomous crap -sparks
+    public void driveForward(double power) {
+        leftFront.setPower(-power);
+        leftBack.setPower(-power);
+        rightFront.setPower(power);
+        rightBack.setPower(power);
+    }
+
+    public void driveBack(double power) {
+        leftFront.setPower(power);
+        leftBack.setPower(power);
+        rightFront.setPower(-power);
+        rightBack.setPower(-power);
+    }
+
+    public void driveRight(double power) {
+        leftFront.setPower(-power);
+        leftBack.setPower(power);
+        rightFront.setPower(-power);
+        rightBack.setPower(power);
+    }
+    public void setDuckSpin(int power) {
+        duckSpin.setPower(1);
+    }
+    public void spinDuckTime(double power, int time) throws InterruptedException {
+        duckSpin.setPower(power);
+        Thread.sleep(time);
+    }
+
+    public void driveForwardTime(double power, int time) throws InterruptedException {
+        driveForward(power);
+        Thread.sleep(time);
+    }
+
+    public void driveBackTime(double power, int time) throws InterruptedException {
+        driveBack(power);
+        Thread.sleep(time);
+    }
+
+    public void driveRightTime(double power, int time) throws InterruptedException {
+        driveRight(power);
+        Thread.sleep(time);
+    }
+    public void stopDriving(double power) {
+        driveForward(power);
+    }
+    public void stopDrivingTime (double power, int time) throws InterruptedException {
+        stopDriving(power);
+        Thread.sleep(time);
+    }
         }
 
 
