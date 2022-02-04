@@ -16,10 +16,6 @@
 bin/
 gen/
 out/
-
-# heap files
-*.hprof
-
 #  Uncomment the following line in case you need and you don't have the release build type files in your app
 # release/
 
@@ -44,13 +40,13 @@ captures/
 
 # IntelliJ
 *.iml
+.idea/
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/gradle.xml
 .idea/assetWizardSettings.xml
 .idea/dictionaries
 .idea/libraries
-.idea/
 # Android Studio 3 in .gitignore file.
 .idea/caches
 .idea/modules.xml
@@ -90,4 +86,3 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
-/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/HardwareMap/HardwareUltimateGoal.java
